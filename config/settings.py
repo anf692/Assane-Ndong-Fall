@@ -61,12 +61,22 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     }
 # }
 
+if os.environ.get("RAILWAY_ENVIRONMENT"):
+    # Railway (PostgreSQL)
+    DATABASES = {
+        "default": dj_database_url.parse(
+            config("DATABASE_URL")
+        )
+    }
+else:
+    # Local (SQLite)
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
-DATABASES = {
-    "default": dj_database_url.parse(
-        config("DATABASE_URL", default="sqlite:///db.sqlite3")
-    )
-}
 
 LANGUAGE_CODE = 'fr-fr'
 TIME_ZONE = 'Africa/Dakar'
