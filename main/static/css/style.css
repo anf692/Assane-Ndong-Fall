@@ -892,3 +892,69 @@ button { cursor: pointer; }
     display: none;
   }
 }
+
+
+/* ══════════════════════════════════════════════════
+   NAVBAR — RESPONSIVE MOBILE
+══════════════════════════════════════════════════ */
+
+@media (max-width: 991px) {
+
+  /* Conteneur nav */
+  .nav-container {
+    padding: 12px 20px;
+  }
+
+  /* Menu déroulant fond noir */
+  #navMenu {
+    background: var(--g10c);
+    border-top: 1px solid var(--g20c);
+    border-radius: 0 0 14px 14px;
+    padding: 12px 20px 20px;
+    margin-top: 4px;
+  }
+
+  /* Liens verticaux bien espacés */
+  .navbar-nav {
+    gap: 4px !important;
+  }
+
+  .nav-lk {
+    display: block;
+    padding: 10px 0 !important;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--g20c);
+    color: var(--wh) !important;
+  }
+
+  .nav-lk::after {
+    display: none; /* pas de soulignement animé sur mobile */
+  }
+
+  /* Bouton contact pleine largeur */
+  .btn-nav {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 24px;
+    margin-top: 8px;
+    border-radius: 10px;
+  }
+
+  .nav-item:last-child .nav-lk {
+    border-bottom: none;
+  }
+
+  /* Icône hamburger visible et propre */
+  .navbar-toggler {
+    border: 1px solid var(--g20c);
+    border-radius: 8px;
+    padding: 6px 10px;
+    line-height: 1;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
