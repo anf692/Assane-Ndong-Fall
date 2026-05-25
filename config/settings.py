@@ -88,3 +88,12 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://assane-ndong-fall.onrender.com",
+]
+
+ALLOWED_HOSTS = [
+    "assane-ndong-fall.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
