@@ -1,11 +1,10 @@
 import os
 from pathlib import Path
 
-import environ
+from decouple import config
 import dj_database_url
 
-env = environ.Env()
-environ.Env.read_env()
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -62,8 +61,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     }
 # }
 
+
 DATABASES = {
-    'default': dj_database_url.parse(env('DATABASE_URL'))
+    "default": dj_database_url.parse(
+        config("DATABASE_URL", default="sqlite:///db.sqlite3")
+    )
 }
 
 LANGUAGE_CODE = 'fr-fr'
