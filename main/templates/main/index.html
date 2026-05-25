@@ -1,0 +1,644 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assane N. Fall — Développeur Fullstack & IA</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Ton CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════════ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="nav-container">
+
+    <a class="logo" href="#"><img src="{% static 'img/logo.png' %}" alt="Assane" class="footer-photo" style="width: 10rem;"></a>
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Menu">
+      <i class="bi bi-list text-white fs-4"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 gap-2 py-3 py-lg-0">
+        <li class="nav-item"><a class="nav-lk" href="#about">À propos</a></li>
+        <li class="nav-item"><a class="nav-lk" href="#stack">Stack</a></li>
+        <li class="nav-item"><a class="nav-lk" href="#projets">Réalisations</a></li>
+        <li class="nav-item"><a class="nav-lk" href="#formations">Formations</a></li>
+        <li class="nav-item mt-2 mt-lg-0">
+          <a class="btn-nav" href="#contact">Me contacter</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-inner">
+
+    <!-- ── Colonne gauche ── -->
+    <div class="hero-left">
+
+      <h1 class="hero-title">
+        Je transforme<br>
+        <span class="c-green">les idées</span> en réalité<span class="c-green">.</span>
+      </h1>
+
+      <p class="hero-desc">
+        Développeur Fullstack &amp; Intégration IA basé au Sénégal, spécialisé dans la création
+        d'applications web et mobiles modernes et intelligentes.<br>
+        <span class="hero-tech-line">
+          React · Angular.js · Flutter · Django · FastAPI · OpenAI · Gemini  · PostgreSQL · Docker · Git
+        </span>
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projets" class="btn-g">Voir mes projets</a>
+        <a href="{% static 'files/cv-assane.pdf' %}" target="_blank" class="btn-w">Télécharger mon CV</a>
+      </div>
+
+      <div class="hero-divider"></div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-nb"><span class="stat-w">05</span><span class="c-green">+</span></div>
+          <div class="stat-lb">Projets Majeurs</div>
+        </div>
+        <div class="stat">
+          <div class="stat-nb"><span class="stat-w">02</span><span class="c-green">+</span></div>
+          <div class="stat-lb">Ans d'Expérience</div>
+        </div>
+        <div class="stat">
+          <div class="stat-nb"><span class="stat-w">100</span><span class="c-green">%</span></div>
+          <div class="stat-lb">Dévouement</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Colonne droite — photo ── -->
+    <div class="hero-right">
+
+      <!-- Badge nom (haut gauche) -->
+      <div class="badge-nom">
+        <span class="bdot"></span>
+        <span class="mono fs-badge">Assane N. FALL</span>
+      </div>
+
+      <!-- Carte photo -->
+      <div class="hero-card">
+        <img src="{% static 'img/assane-2.jpg' %}" alt="Assane">
+        {% comment %} <div class="photo-ph"><i class="bi bi-person-fill"></i></div> {% endcomment %}
+      </div>
+
+      <!-- Badge disponible (bas) -->
+      <div class="badge-dispo">
+        <span class="bdot pulse"></span>
+        <span class="mono fs-badge">Disponible pour projets</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     À PROPOS  (fond blanc)
+═══════════════════════════════════════════════════ -->
+<section id="about" class="s-white">
+  <div class="s-container">
+    <div class="row align-items-center g-5">
+
+      <!-- Photos -->
+      <div class="col-lg-5 order-1 order-lg-2">
+        <div class="about-photos">
+          <div class="about-main-photo">
+            <img src="{% static 'img/assane-2.jpg' %}" alt="Assane">
+          </div>
+          <div class="about-second-photo">
+            <img src="{% static 'img/assane-2.jpg' %}" alt="Assane">
+            {% comment %} <div class="photo-ph dark sm"><i class="bi bi-camera-fill"></i></div> {% endcomment %}
+          </div>
+        </div>
+      </div>
+
+      <!-- Texte -->
+      <div class="col-lg-7 order-2 order-lg-1">
+        <h2 class="s-title dark">À propos <span class="c-green">.</span></h2>
+
+        <p class="about-p">
+          Passionné par le développement web et mobile, je combine expertise technique
+          et vision stratégique pour créer des solutions qui répondent aux vrais besoins
+          utilisateurs. Formé à l'Institut Supérieur d'Enseignement Professionnel Amadou
+          Trawaré (ISEP-AT) de Diamniadio en Analyse de Performance Digitale et actuellement
+          en formation Développement Fullstack &amp; IA chez Simplon Sénégal, j'intègre les
+          dernières technologies pour transformer des idées en produits concrets et performants.
+        </p>
+        <p class="about-p mt-3">
+          Ma force ? Une approche pragmatique qui allie qualité du code, expérience utilisateur
+          fluide et livraison dans les délais. Je ne construis pas juste des applications,
+          je crée des expériences numériques qui génèrent de la valeur.
+        </p>
+
+        <a href="#contact" class="btn-g mt-4 d-inline-block">
+          Excellence technique · Impact métier · Livraison garantie
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     STACK  (fond noir)
+═══════════════════════════════════════════════════ -->
+<section id="stack" class="s-black">
+  <div class="s-container">
+
+    <div class="text-center mb-head">
+      <h2 class="s-title light">Technique d'empilement <span class="c-green">.</span></h2>
+      <p class="s-sub">Technologies et outils que j'utilise au quotidien</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stack-card">
+          <div class="stack-head"><span class="sdot"></span>L'extrémité avant</div>
+          <ul class="stack-ul">
+            <li>Réagir (React)</li>
+            <li>Angular</li>
+            <li>Flutter</li>
+            <li>Tailwind CSS</li>
+            <li>TypeScript</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stack-card">
+          <div class="stack-head"><span class="sdot"></span>Backend</div>
+          <ul class="stack-ul">
+            <li>Django</li>
+            <li>FastAPI</li>
+            <li>Supabase</li>
+            <li>PostgreSQL</li>
+            <li>Firebase</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stack-card">
+          <div class="stack-head"><span class="sdot"></span>IA et API</div>
+          <ul class="stack-ul">
+            <li>API REST</li>
+            <li>API OpenAI</li>
+            <li>API Gemini</li>
+            <li>Ollama</li>
+            <li>Hugging Face</li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stack-card">
+          <div class="stack-head"><span class="sdot"></span>DevOps et outils</div>
+          <ul class="stack-ul">
+            <li>Docker</li>
+            <li>Git / GitHub</li>
+            <li>Linux</li>
+            <li>Figma</li>
+            <li>Vercel / render</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     RÉALISATIONS  (fond blanc)
+═══════════════════════════════════════════════════ -->
+<section id="projets" class="s-white">
+  <div class="s-container">
+
+    <div class="text-center mb-head">
+      <h2 class="s-title dark">Réalisations <span class="c-green">.</span></h2>
+      <p class="s-sub" style="color:#888">Projets récents qui illustrent mon expertise technique</p>
+    </div>
+
+    <div class="row g-4">
+
+      {% if projets %}
+        {% for p in projets %}
+        <div class="col-lg-4 col-md-6">
+          <div class="pcard">
+
+            <!-- Image -->
+            <div class="pcard-img">
+              {% if p.image %}
+                <img src="{{ p.image.url }}" alt="{{ p.titre }}" loading="lazy">
+              {% else %}
+                <div class="pcard-ph"><i class="bi bi-window-stack"></i></div>
+              {% endif %}
+              <div class="pcard-gradient"></div>
+            </div>
+
+            <!-- Corps -->
+            <div class="pcard-body">
+              <h5 class="pcard-title">{{ p.titre }}</h5>
+              <p class="pcard-desc">{{ p.description }}</p>
+
+              <!-- Technologies depuis get_technologies_list() -->
+              <div class="pcard-tags">
+                {% for tech in p.get_technologies_list %}
+                  <span class="tag">{{ tech }}</span>
+                {% endfor %}
+              </div>
+
+              <!-- Liens -->
+              <div class="pcard-links">
+                {% if p.lien_demo %}
+                  <a href="{{ p.lien_demo }}" target="_blank" rel="noopener" class="plink">
+                    <i class="bi bi-box-arrow-up-right"></i> Démo en direct
+                  </a>
+                {% endif %}
+                {% if p.lien_code %}
+                  <a href="{{ p.lien_code }}" target="_blank" rel="noopener" class="plink">
+                    <i class="bi bi-file-earmark-code"></i> Code
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+
+          </div>
+        </div>
+        {% endfor %}
+
+      {% else %}
+        <!-- ── Projets de démonstration si la BDD est vide ── -->
+
+        {% with demo_projets="Tableau de Bord Analytics IA|Plateforme d'analyse en temps réel avec prédictions machine learning|Réagir,Python,TensorFlow,FastAPI|bi-bar-chart-line-fill,Application mobile de commerce électronique|App multiplateforme avec fonctionnalités avancées et UX fluide|Flutter,Firebase,Stripe,API REST|bi-phone-fill,Système d'Automatisation Intelligent|Automatisation IoT avec prise de décision basée sur l'IA|Next.js,Django,PostgreSQL,Docker|bi-cpu-fill,Plateforme Chatbot LLM|IA conversationnelle alimentée par des modèles de langage avancés|Réagir,OpenAI,Python,AWS|bi-chat-dots-fill,Gestion de projet SaaS|Outil collaboratif avec mises à jour en temps réel|Next.js,Django,WebSocket,Redis|bi-kanban-fill,Application Vision par Ordinateur|Reconnaissance et traitement d'images avec deep learning|Python,PyTorch,Flask,OpenCV|bi-eye-fill" %}{% endwith %}
+
+        <!-- Carte 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pcard">
+            <div class="pcard-img"><div class="pcard-ph"><i class="bi bi-bar-chart-line-fill"></i></div><div class="pcard-gradient"></div></div>
+            <div class="pcard-body">
+              <h5 class="pcard-title">Tableau de Bord Analytics IA</h5>
+              <p class="pcard-desc">Plateforme d'analyse en temps réel avec prédictions machine learning et visualisation de données</p>
+              <div class="pcard-tags"><span class="tag">Réagir</span><span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">FastAPI</span></div>
+              <div class="pcard-links"><a href="#" class="plink"><i class="bi bi-box-arrow-up-right"></i> Démo en direct</a><a href="#" class="plink"><i class="bi bi-file-earmark-code"></i> Code</a></div>
+            </div>
+          </div>
+        </div>
+        <!-- Carte 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pcard">
+            <div class="pcard-img"><div class="pcard-ph"><i class="bi bi-phone-fill"></i></div><div class="pcard-gradient"></div></div>
+            <div class="pcard-body">
+              <h5 class="pcard-title">Application mobile de commerce électronique</h5>
+              <p class="pcard-desc">Application mobile multiplateforme avec fonctionnalités avancées et UX fluide</p>
+              <div class="pcard-tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Stripe</span><span class="tag">API REST</span></div>
+              <div class="pcard-links"><a href="#" class="plink"><i class="bi bi-box-arrow-up-right"></i> Démo en direct</a><a href="#" class="plink"><i class="bi bi-file-earmark-code"></i> Code</a></div>
+            </div>
+          </div>
+        </div>
+        <!-- Carte 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pcard">
+            <div class="pcard-img"><div class="pcard-ph"><i class="bi bi-cpu-fill"></i></div><div class="pcard-gradient"></div></div>
+            <div class="pcard-body">
+              <h5 class="pcard-title">Système d'Automatisation Intelligent</h5>
+              <p class="pcard-desc">Plateforme d'automatisation IoT avec prise de décision basée sur l'IA</p>
+              <div class="pcard-tags"><span class="tag">Next.js</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></div>
+              <div class="pcard-links"><a href="#" class="plink"><i class="bi bi-box-arrow-up-right"></i> Démo en direct</a><a href="#" class="plink"><i class="bi bi-file-earmark-code"></i> Code</a></div>
+            </div>
+          </div>
+        </div>
+        <!-- Carte 4 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pcard">
+            <div class="pcard-img"><div class="pcard-ph"><i class="bi bi-chat-dots-fill"></i></div><div class="pcard-gradient"></div></div>
+            <div class="pcard-body">
+              <h5 class="pcard-title">Plateforme Chatbot LLM</h5>
+              <p class="pcard-desc">Plateforme d'IA conversationnelle alimentée par des modèles de langage avancés</p>
+              <div class="pcard-tags"><span class="tag">Réagir</span><span class="tag">OpenAI</span><span class="tag">Python</span><span class="tag">AWS</span></div>
+              <div class="pcard-links"><a href="#" class="plink"><i class="bi bi-box-arrow-up-right"></i> Démo en direct</a><a href="#" class="plink"><i class="bi bi-file-earmark-code"></i> Code</a></div>
+            </div>
+          </div>
+        </div>
+        <!-- Carte 5 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pcard">
+            <div class="pcard-img"><div class="pcard-ph"><i class="bi bi-kanban-fill"></i></div><div class="pcard-gradient"></div></div>
+            <div class="pcard-body">
+              <h5 class="pcard-title">Gestion de projet SaaS</h5>
+              <p class="pcard-desc">Outil de gestion de projet collaboratif avec mises à jour en temps réel</p>
+              <div class="pcard-tags"><span class="tag">Next.js</span><span class="tag">Django</span><span class="tag">WebSocket</span><span class="tag">Redis</span></div>
+              <div class="pcard-links"><a href="#" class="plink"><i class="bi bi-box-arrow-up-right"></i> Démo en direct</a><a href="#" class="plink"><i class="bi bi-file-earmark-code"></i> Code</a></div>
+            </div>
+          </div>
+        </div>
+        <!-- Carte 6 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pcard">
+            <div class="pcard-img"><div class="pcard-ph"><i class="bi bi-eye-fill"></i></div><div class="pcard-gradient"></div></div>
+            <div class="pcard-body">
+              <h5 class="pcard-title">Application Vision par Ordinateur</h5>
+              <p class="pcard-desc">Application de reconnaissance et traitement d'images avec deep learning</p>
+              <div class="pcard-tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Flask</span><span class="tag">OpenCV</span></div>
+              <div class="pcard-links"><a href="#" class="plink"><i class="bi bi-box-arrow-up-right"></i> Démo en direct</a><a href="#" class="plink"><i class="bi bi-file-earmark-code"></i> Code</a></div>
+            </div>
+          </div>
+        </div>
+
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     FORMATIONS & CERTIFICATIONS  (fond noir)
+═══════════════════════════════════════════════════ -->
+<section id="formations" class="s-black">
+  <div class="s-container">
+
+    <div class="text-center mb-head">
+      <h2 class="s-title light">Formations et certifications <span class="c-green">.</span></h2>
+      <p class="s-sub">Apprentissage continu et développement professionnel</p>
+    </div>
+
+    <div class="form-wrapper">
+
+      <!-- ── ÉDUCATION ── -->
+      <div class="form-label-section c-green mono">Éducation</div>
+
+      {% if formations %}
+        {% for f in formations %}
+        <div class="tl-item">
+          <div class="tl-dot-col">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <!-- get_periode() → "date_debut - date_fin" -->
+            <p class="tl-date mono">{{ f.get_periode }}</p>
+            <h5 class="tl-title">{{ f.titre }}</h5>
+            <p class="tl-org">{{ f.etablissement }}</p>
+            {% if f.description %}
+              <p class="tl-desc">{{ f.description }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+
+      {% else %}
+        <!-- Données de démo si BDD vide -->
+        <div class="tl-item">
+          <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-content">
+            <p class="tl-date mono">En cours · 2025 - 2026</p>
+            <h5 class="tl-title">Développement CPS Fullstack &amp; IA</h5>
+            <p class="tl-org">Simplon Sénégal</p>
+            <p class="tl-desc">Formation intensive en développement web, mobile et intégration d'IA. Stack moderne : React, Next.js, Flutter, Django, FastAPI, APIs IA (OpenAI, Gemini), DevOps.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-content">
+            <p class="tl-date mono">2024 - 2025</p>
+            <h5 class="tl-title">Technicien Supérieur en Analyse de Performance Digitale</h5>
+            <p class="tl-org">ISEP-AT — Institut Supérieur d'Enseignement Professionnel Amadou Trawaré</p>
+            <p class="tl-desc">Analyse de données, développement web et mobile, stratégies digitales, intelligence artificielle et automatisation, community manager.</p>
+          </div>
+        </div>
+      {% endif %}
+
+      <!-- ── CERTIFICATIONS ── -->
+      <div class="form-label-section c-green mono mt-big">Certifications</div>
+
+      <div class="cert-stack">
+
+        {% if certifications %}
+          {% for c in certifications %}
+          <div class="cert-row">
+            <div class="cert-dot-col"><span class="sdot"></span></div>
+            <div class="cert-body">
+              <div class="cert-title">{{ c.titre }}</div>
+              <div class="cert-org">{{ c.organisme }}</div>
+              {% if c.lien %}
+                <a href="{{ c.lien }}" target="_blank" rel="noopener" class="cert-lien mono">
+                  <i class="bi bi-patch-check-fill me-1 c-green"></i>Voir le certificat
+                </a>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+
+        {% else %}
+          <!-- Données de démo -->
+          <div class="cert-row">
+            <div class="cert-dot-col"><span class="sdot"></span></div>
+            <div class="cert-body">
+              <div class="cert-title">Conception Web Responsive</div>
+              <div class="cert-org">freeCodeCamp</div>
+              <div class="cert-meta mono">300 heures · 2024</div>
+            </div>
+          </div>
+          <div class="cert-row">
+            <div class="cert-dot-col"><span class="sdot"></span></div>
+            <div class="cert-body">
+              <div class="cert-title">Algorithmes JavaScript</div>
+              <div class="cert-org">freeCodeCamp</div>
+              <div class="cert-meta mono">300 heures · 2024</div>
+            </div>
+          </div>
+          <div class="cert-row">
+            <div class="cert-dot-col"><span class="sdot"></span></div>
+            <div class="cert-body">
+              <div class="cert-title">Google Analytics</div>
+              <div class="cert-org">Google Skillshop</div>
+              <div class="cert-meta mono">Certification · 2024</div>
+            </div>
+          </div>
+          <div class="cert-row">
+            <div class="cert-dot-col"><span class="sdot"></span></div>
+            <div class="cert-body">
+              <div class="cert-title">Git et GitHub</div>
+              <div class="cert-org">Salles de classe ouvertes</div>
+              <div class="cert-meta mono">Certification · 2024</div>
+            </div>
+          </div>
+        {% endif %}
+
+      </div><!-- /cert-stack -->
+    </div><!-- /form-wrapper -->
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     ILS M'ONT FAIT CONFIANCE  (fond blanc)
+═══════════════════════════════════════════════════ -->
+<section class="s-white">
+  <div class="s-container">
+    <div class="text-center mb-head">
+      <h2 class="s-title dark">Ils m'ont fait confiance <span class="c-green">.</span></h2>
+    </div>
+    <div class="clients-grid">
+      {% for i in "12345678" %}
+      <div class="client-box">Logo {{ forloop.counter }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     CONTACT  (fond noir)
+═══════════════════════════════════════════════════ -->
+<section id="contact" class="s-black">
+  <div class="s-narrow">
+
+    <div class="text-center mb-head">
+      <h2 class="s-title light">Travaillons ensemble <span class="c-green">.</span></h2>
+      <p class="s-sub">
+        Vous avez un projet en tête ? Une idée à concrétiser ? Je suis disponible pour discuter
+        de vos besoins et vous proposer des solutions sur-mesure. Envoyez-moi un message et
+        lançons ensemble votre prochain succès numérique.
+      </p>
+    </div>
+
+    <!-- ── Messages Django (messages.success) ── -->
+    {% if messages %}
+      {% for msg in messages %}
+      <div class="alert-ok" role="alert">
+        <i class="bi bi-check-circle-fill me-2"></i>{{ msg }}
+      </div>
+      {% endfor %}
+    {% endif %}
+
+    <!-- ── Formulaire ──
+         POST vers {% url 'contact' %}
+         Champs lus dans views.py :
+           nom     = request.POST.get('nom')
+           email   = request.POST.get('email')
+           contenu = request.POST.get('message')   ← nom du champ HTML = "message"
+         Puis Message.objects.create(nom, email, contenu)
+    ── -->
+    <form action="{% url 'contact' %}" method="POST" id="contactForm" novalidate>
+      {% csrf_token %}
+
+      <div class="row g-3">
+
+        <!-- nom -->
+        <div class="col-md-6">
+          <label class="form-lbl" for="id_nom">Nom complet</label>
+          <input type="text"
+                 id="id_nom"
+                 name="nom"
+                 class="form-inp"
+                 placeholder="Votre nom"
+                 required
+                 autocomplete="name" />
+        </div>
+
+        <!-- email -->
+        <div class="col-md-6">
+          <label class="form-lbl" for="id_email">E-mail</label>
+          <input type="email"
+                 id="id_email"
+                 name="email"
+                 class="form-inp"
+                 placeholder="votre@email.com"
+                 required
+                 autocomplete="email" />
+        </div>
+
+        <!-- message → lu comme 'message' dans la view, stocké dans contenu -->
+        <div class="col-12">
+          <label class="form-lbl" for="id_message">Message</label>
+          <textarea id="id_message"
+                    name="message"
+                    class="form-inp form-ta"
+                    placeholder="Parlez-moi de votre projet..."
+                    required></textarea>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn-submit">Envoyer le message</button>
+        </div>
+
+      </div>
+    </form>
+
+    <!-- Liens sociaux -->
+    <div class="socials">
+      <a href="mailto:fassane348@gmail.com" class="soc-lk">
+        <i class="bi bi-envelope-fill"></i> fassane348@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/assanendongfall" target="_blank" rel="noopener" class="soc-lk">
+        <i class="bi bi-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/anf692" target="_blank" rel="noopener" class="soc-lk">
+        <i class="bi bi-github"></i> GitHub
+      </a>
+      <a href="https://wa.me/221784667455" target="_blank" rel="noopener" class="soc-lk">
+        <i class="bi bi-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <img src="{% static 'img/logo.png' %}" alt="Assane" class="footer-photo" style="width: 10rem;">
+    <p class="footer-copy">© 2026 ASSANE. Tous droits réservés. Développeur Fullstack &amp; Intégration IA.</p>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/assanendongfall" target="_blank" rel="noopener" class="fsoc"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/anf692"   target="_blank" rel="noopener" class="fsoc"><i class="bi bi-github"></i></a>
+      <a href="https://wa.me/221784667455"       target="_blank" rel="noopener" class="fsoc"><i class="bi bi-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Ton JS -->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
